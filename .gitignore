@@ -1,0 +1,11 @@
+# Estado local do Obsidian (abas abertas, layout) — muda o tempo todo
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+
+# Lixeira do Obsidian
+.trash/
+
+# Sistema
+.DS_Store
+Thumbs.db
