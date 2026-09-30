@@ -27,7 +27,7 @@ Desenvolvedor bom não memoriza: **externaliza** o conhecimento e o reconstrói 
 | `Fluxos/` | Fluxos ponta a ponta (Event Storming + diagrama de sequência) | ✅ |
 | `Arquitetura/` | Visão de sistemas (C4) | ✅ |
 | `Decisões/` | ADRs: o *porquê* das decisões técnicas | ✅ |
-| `Pessoas/` | Quem sabe o quê: para quem perguntar cada assunto | ✅ |
+| `Pessoas/` | Uma nota por pessoa (projeto, função, assuntos) + `Quem sabe o quê`, tabela automática por projeto e nome | ✅ |
 | `Caixa de ferramentas/` | Queries, comandos, roteiros de debug, snippets — separados pelo campo `tipo` | ✅ |
 | `Excalidraw/` | Desenhos livres (quadros de Event Storming, rascunhos) | ✅ |
 | `Cards/` | Uma nota por card da sprint que **te ensinou algo** (história ou bug) | ⏳ |
@@ -78,6 +78,7 @@ Os plugins e as configurações já vêm na pasta `.obsidian/`. Ao abrir o vault
 - Decisões: `ADR-001 Nome curto`
 - Cards: `CHAVE-123 Título curto` (a chave do Jira/Azure)
 - Ferramentas: `Query - …`, `Comando - …`, `Debug - …`
+- Pessoas: `Nome Sobrenome`, com o primeiro nome em `aliases` (cite como `[[Ana Lima|Ana]]`)
 
 **Tags de confiança**
 - `#confirmado`: validado com alguém do negócio
@@ -96,6 +97,9 @@ Os plugins e as configurações já vêm na pasta `.obsidian/`. Ao abrir o vault
 | `Cards/` | `tipo` | `historia` · `bug` |
 | `Cards/` | `status` | `em-andamento` · `fechado` |
 | `Cards/` | `sprint`, `card`, `toca` | número, URL do card, notas relacionadas |
+| `Pessoas/` | `tipo` | `pessoa` |
+| `Pessoas/` | `projeto`, `funcao` | time/projeto (ex.: Vendas, Pagamentos, Segurança) e função |
+| `Pessoas/` | `sabe`, `contato` | lista de assuntos, canal preferido |
 | `Caixa de ferramentas/` | `tipo` | `query` · `comando` · `debug` · `snippet` · `ambiente` (ou qualquer outro) |
 | `Caixa de ferramentas/` | `serve` | uma frase dizendo para que serve (aparece no índice) |
 | `Caixa de ferramentas/` | `toca` | links para entidades e regras (`"[[Pedido]]"`) |
@@ -114,8 +118,9 @@ Os plugins e as configurações já vêm na pasta `.obsidian/`. Ao abrir o vault
    cd "Vault - Nome do Projeto"
    find Domínio Regras Fluxos Arquitetura Decisões Diário Excalidraw -name "*.md" -delete
    find Cards "Caixa de ferramentas" -name "*.md" ! -name "00 - *" -delete
+   find Pessoas -name "*.md" ! -name "Quem sabe o quê.md" -delete
    ```
-4. **Limpe as notas únicas**, mantendo a estrutura: `Glossário`, `Pessoas/Quem sabe o quê`, a seção "Dúvidas gerais" de `Dúvidas em aberto` e o título do `00 - Comece aqui`.
+4. **Limpe as notas únicas**, mantendo a estrutura: `Glossário`, a seção "Dúvidas gerais" de `Dúvidas em aberto` e o título do `00 - Comece aqui`.
 5. **Primeira semana:**
    - Glossário desde o primeiro dia
    - Um Event Storming (no Excalidraw, mesmo sozinho) do fluxo principal

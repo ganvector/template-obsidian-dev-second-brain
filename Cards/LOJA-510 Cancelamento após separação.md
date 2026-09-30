@@ -14,7 +14,7 @@ toca: [RN-001 Cancelamento de pedido, Pedido]
 Hoje dá para cancelar em `EM_SEPARACAO` sem custo, mas devolver itens ao estoque custa ao CD. O negócio quer cobrar uma taxa nesse caso.
 
 ## O que descobri
-- Isso responde a dúvida aberta da RN-001 ("tem custo devolver ao estoque?") → **sim**, segundo [[Quem sabe o quê#Carlos (Operações)|Carlos]].
+- Isso responde a dúvida aberta da RN-001 ("tem custo devolver ao estoque?") → **sim**, segundo [[Carlos Mendes|Carlos]].
 - Problema: cartão está só **pré-autorizado**. Para cobrar taxa, precisa de **captura parcial** do valor da taxa e liberação do resto. O gateway suporta? 🤔
 - Pix já está capturado → seria estorno parcial (valor − taxa).
 
@@ -22,8 +22,8 @@ Hoje dá para cancelar em `EM_SEPARACAO` sem custo, mas devolver itens ao estoqu
 - (pendente) valor da taxa: fixo ou % do pedido?
 
 ## Dúvidas
-- [ ] Gateway suporta captura parcial? → perguntar para [[Quem sabe o quê#Bruna (Dev sênior)|Bruna]]
-- [ ] Taxa fixa ou percentual? → Ana
+- [ ] Gateway suporta captura parcial? → perguntar para [[Bruna Costa|Bruna]]
+- [ ] Taxa fixa ou percentual? → [[Ana Lima|Ana]]
 - [ ] Como mostrar a taxa ao cliente ANTES dele confirmar o cancelamento?
 
 ## Colheita (antes de fechar o card)

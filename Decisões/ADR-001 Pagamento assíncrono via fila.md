@@ -5,6 +5,8 @@ data: 2025-03-10
 ---
 # 🧠 ADR-001 Pagamento assíncrono via fila
 
+**Autora:** [[Bruna Costa|Bruna]]
+
 ## Contexto
 O gateway de pagamento às vezes demora 20s+ para responder na Black Friday, travando o checkout.
 

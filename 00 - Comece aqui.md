@@ -19,7 +19,7 @@ tags: [indice]
 - 🎨 Desenhos: `$= dv.pages('"Excalidraw"').sort(p => p.file.name).file.link.join(" · ")`
 - 🗂️ Cards em andamento: `$= (l => l.length ? l.join(" · ") : "nenhum")(dv.pages('"Cards"').where(p => p.status == "em-andamento").file.link)` — ver [[00 - Painel de cards]]
 - 🧰 Caixa de ferramentas: `$= dv.pages('"Caixa de ferramentas"').where(p => p.tipo).length` itens — ver [[00 - Caixa de ferramentas]]
-- 👥 [[Quem sabe o quê]]
+- 👥 [[00 - Quem sabe o quê]] — `$= dv.pages('"Pessoas"').where(p => p.tipo == "pessoa").length` pessoas em `$= new Set(dv.pages('"Pessoas"').where(p => p.tipo == "pessoa").projeto.array()).size` projetos
 - ❓ [[Dúvidas em aberto]] — `$= dv.pages('-"Templates"').file.tasks.where(t => !t.completed && (t.section.subpath || "").includes("Dúvida")).length` abertas
 
 ## Como uso

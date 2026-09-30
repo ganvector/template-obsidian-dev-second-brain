@@ -6,7 +6,7 @@ aliases: [Order, Venda]
 
 **Em uma frase:** a intenção de compra do cliente, do checkout até a entrega.
 **Código:** `orders/domain/Order.java` · tabela `orders`
-**Dono no negócio:** [[Quem sabe o quê#Ana (PO)|Ana (PO)]]
+**Dono no negócio:** [[Ana Lima|Ana (PO)]]
 
 ## Ciclo de vida
 ```mermaid

@@ -12,7 +12,7 @@ tags: [indice]
 
 ```dataviewjs
 const tipos = { query: "🗃️ Queries", comando: "⌨️ Comandos", debug: "🐞 Processos de debug", snippet: "✂️ Snippets", ambiente: "⚙️ Ambiente e acessos" };
-const notas = dv.pages('"Caixa de ferramentas"').where(p => p.file.name !== dv.current().file.name);
+const notas = dv.pages('"Utils"').where(p => p.file.name !== dv.current().file.name);
 for (const grupo of notas.groupBy(p => p.tipo ?? "sem tipo").sort(g => g.key)) {
   dv.header(3, tipos[grupo.key] ?? `📎 ${grupo.key}`);
   dv.table(["Nota", "Para que serve", "Toca em"],

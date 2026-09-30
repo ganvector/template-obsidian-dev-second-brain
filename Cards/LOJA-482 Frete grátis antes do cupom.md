@@ -14,7 +14,7 @@ toca: [RN-002 Frete grátis, Pedido]
 Clientes reclamam que ao aplicar cupom perdem o frete grátis. O negócio quer que o cupom não "puna" o cliente.
 
 ## O que descobri
-- [[Quem sabe o quê#Ana (PO)|Ana]] confirmou: vale o subtotal **antes** do cupom. O código estava errado desde o início.
+- [[Ana Lima|Ana]] confirmou: vale o subtotal **antes** do cupom. O código estava errado desde o início.
 - O cálculo roda em **dois lugares**: checkout (`ShippingCalculator`) e resumo do carrinho (`CartSummary`). Só corrigir um geraria valor diferente entre carrinho e checkout!
 - O time chama de "subtotal bruto" (antes do cupom) e "subtotal líquido" (depois).
 
